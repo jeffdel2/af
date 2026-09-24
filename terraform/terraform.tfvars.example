@@ -1,0 +1,11 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# Never commit terraform.tfvars to source control.
+
+auth0_domain        = "dev-XXXXXXXX.us.auth0.com"
+auth0_client_id     = "<M2M app client ID>"
+auth0_client_secret = "<M2M app client secret>"
+
+app_name      = "My App"
+support_email = "support@example.com"
+web_app_url   = "http://localhost:3000"
+mobile_app_scheme = "myapp"
