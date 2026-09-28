@@ -7,5 +7,5 @@ auth0_client_secret = "<M2M app client secret>"
 
 app_name      = "My App"
 support_email = "support@example.com"
-web_app_url   = "http://localhost:3000"
+web_app_url   = "http://localhost:5173"
 mobile_app_scheme = "myapp"

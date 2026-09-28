@@ -33,8 +33,10 @@ resource "auth0_client" "web_app" {
   app_type = "spa"
 
   callbacks           = ["${var.web_app_url}/callback"]
-  allowed_logout_urls = ["${var.web_app_url}"]
+  allowed_logout_urls = ["${var.web_app_url}/login"]
   web_origins         = ["${var.web_app_url}"]
+
+  cross_origin_auth = true
 
   grant_types = ["authorization_code", "implicit", "refresh_token"]
 
@@ -82,8 +84,8 @@ resource "auth0_client" "mobile_app" {
 # -------------------------------------------------------------------
 # MFA — require for all sign-ins (TOTP authenticator app + email OTP)
 # -------------------------------------------------------------------
-# resource "auth0_guardian" "mfa" {
-#  policy = "all-applications"
-#  otp    = true
-#  email  = true
-#}
+resource "auth0_guardian" "mfa_policy" {
+  policy = "all-applications"
+  email  = true
+  otp = true
+}

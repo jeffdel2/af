@@ -1,6 +1,0 @@
-[submodule "web"]
-	path = web
-	url = https://github.com/auth0-samples/auth0-react-samples.git
-[submodule "mobile"]
-	path = mobile
-	url = https://github.com/auth0-samples/auth0-react-native-sample.git

@@ -29,6 +29,34 @@ Thumbs.db
 **/override.tf.json
 
 # ---------------------------------------------------------------
-# web/ and mobile/ are git submodules — their .gitignore files
-# live inside their own repos.
+# Node / React (web)
 # ---------------------------------------------------------------
+web/node_modules/
+web/dist/
+web/.env
+web/.env.local
+web/.env.*.local
+
+# ---------------------------------------------------------------
+# React Native / Expo (mobile)
+# ---------------------------------------------------------------
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/web-build/
+mobile/.env
+mobile/.env.local
+mobile/.env.*.local
+
+# Native build artifacts
+mobile/ios/build/
+mobile/ios/DerivedData/
+mobile/ios/Pods/
+mobile/android/build/
+mobile/android/.gradle/
+mobile/android/app/build/
+mobile/android/local.properties
+
+# Signing keys
+mobile/*.jks
+mobile/*.keystore
